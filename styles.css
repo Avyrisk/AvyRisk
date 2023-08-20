@@ -71,7 +71,6 @@ body {
     display: none;
     flex-direction: column;
     cursor: pointer;
-    margin-right: 1rem;
 }
 
 .hamburger div {
@@ -79,19 +78,16 @@ body {
     height: 3px;
     background-color: var(--secondary-color);
     margin: 3px 0;
-    transition: all 0.3s ease;
+    transition: all 0.5s ease;
 }
 
 /* Section styles */
 
 .intro {
     display: flex;
-    height: 83.65vh; /* Set the intro section to cover the viewport height */
+    height: 83.65vh;
     position: relative;
     background-color: #f5fbff;
-    /* background-image: url(Back.jpeg);
-    background-repeat: no-repeat;
-    background-size: cover; */
 
 }
 
@@ -140,13 +136,139 @@ body {
     margin-top: 1rem;
 }
 
+.about-content {
+    background-color: #f5fbff;
+    padding: 2rem 10%;
+    margin: 0 auto;
+}
+
+.about-title {
+    font-size: 2.5rem;
+    color: var(--secondary-color);
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.about-description {
+    font-size: 1.2rem;
+    color: var(--secondary-color);
+    margin-bottom: 2rem;
+    text-align: center;
+    line-height: 1.6;
+}
+
+/* Improve feature list style */
+.feature-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+.feature {
+    text-align: center;
+}
+
+.feature i {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 1rem;
+    font-size: 5rem;
+    color: white;
+}
+
+.feature h3 {
+    font-size: 1.5rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.feature p {
+    font-size: 1rem;
+    color: var(--primary-color);
+}
+
+/* Add contact styles */
+.contact-content {
+    background-color: #f5fbff;
+    padding: 2rem 10%;
+    margin: 0 auto;
+    height: 83.5vh;
+}
+
+.contact-title {
+    font-size: 2.5rem;
+    color: var(--secondary-color);
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.contact-description {
+    font-size: 1.2rem;
+    color: var(--secondary-color);
+    margin-bottom: 2rem;
+    text-align: center;
+    line-height: 1.6;
+}
+
+.contact-form {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    font-size: 1.2rem;
+    color: var(--secondary-color);
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid var(--secondary-color);
+    border-radius: 4px;
+    font-size: 1rem;
+    outline: none; 
+}
+
+.form-group textarea {
+    resize: none;
+}
+
+.btn {
+    display: inline-block;
+    padding: 0.8rem 1.2rem;
+    color: white;
+    background-color: var(--primary-color);;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.btn-primary {
+    background-color: #202A44;
+}
+
+.btn:hover {
+    background-color: var(--primary-color);
+    color: #0d152d;
+}
+
 
 /* Footer styles */
 .footer {
     text-align: center;
+    font-weight: bold;
     padding: 1rem;
-    background-color: var(--secondary-color);
-    color: var(--primary-color);
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
 }
 
 /* Responsive styles */
@@ -156,11 +278,15 @@ body {
         flex-direction: column;
         width: 100%;
         text-align: center;
-        background-color: #303655;
+        background-color: var(--primary-color);
         position: absolute;
         top: 60px;
         left: 0;
         z-index: 1;
+    }
+
+    .nav-links li:hover {
+        background-color: white;
     }
 
     .nav-links.active {
@@ -176,20 +302,39 @@ body {
         display: flex;
     }
 
-    .hamburger.active div:nth-child(1) {
-        transform: translateY(8px) rotate(45deg);
+    .hamburger.active .bar1 {
+        transform: rotate(-45deg) translate(-6px, 6px);
     }
-
-    .hamburger.active div:nth-child(2) {
+    
+    .hamburger.active .bar2 {
         opacity: 0;
     }
-
-    .hamburger.active div:nth-child(3) {
-        transform: translateY(-8px) rotate(-45deg);
+    
+    .hamburger.active .bar3 {
+        transform: rotate(45deg) translate(-6px, -6px);
+    }
+    
+    .hamburger .bar {
+        width: 30px;
+        height: 3px;
+        background-color: var(--secondary-color);
+        margin: 3px 0;
+        transition: all 0.3s ease;
+    }
+    
+    /* Add transitions for opening the navbar */
+    .nav-links {
+        transition: transform 0.3s ease-in-out;
+        transform: translateY(-100%);
+    }
+    
+    .nav-links.active {
+        transform: translateY(0);
     }
 
     .intro {
         flex-direction: column;
+        height: 85.5vh;
     }
 
     .left-half {
@@ -208,5 +353,34 @@ body {
         font-size: 1rem;
         color: var(--secondary-color);
         text-align: center; /* Center the tagline */
+    }
+
+    .about-title {
+        font-size: 1.5rem;
+    }
+    
+    .about-description {
+        font-size: 1rem;
+    }
+
+    .feature-list {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .feature i {
+        font-size: 4rem;
+    }
+    
+    .feature h3 {
+        font-size: 14px;
+    }
+    
+    .feature p {
+        font-size: 12px;
+    }
+
+    .contact-content {
+        height: 85.5vh;
     }
 }

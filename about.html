@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <script src="https://kit.fontawesome.com/96e993c355.js" crossorigin="anonymous"></script>
+    <title>AvyRisk</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- Include your navigation bar here -->
+    <nav class="navbar">
+        <div class="nav-content">
+            <h1 class="logo">AvyRisk</h1>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li style="margin-right: 0;"><a href="contact.html">Contact Us</a></li>
+            </ul>
+            <div class="hamburger" id="hamburger">
+                <div class="bar bar1"></div>
+                <div class="bar bar2"></div>
+                <div class="bar bar3"></div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="about-content" style="padding-bottom: 0;">
+        <h1 class="about-title">About AvyRisk</h1>
+        <p class="about-description">
+            AvyRisk is a powerful and innovative app designed to enhance your mountain adventures. Our mission is to
+            provide you with the tools and information you need to make informed decisions and stay safe while exploring
+            the great outdoors.
+        </p>
+        <p class="about-description">
+            Our app leverages cutting-edge technology to assess the risk of avalanches and other mountain-related
+            dangers. By analyzing factors such as temperature, wind, fresh snowfall, slope steepness, and slope
+            direction, AvyRisk calculates a danger score that helps you understand the potential hazards of your chosen
+            route.
+        </p>
+        <p class="about-description" style="margin-bottom: 0;">
+            Whether you're an experienced mountaineer or a novice adventurer, AvyRisk is your ultimate companion for
+            risk assessment and safety. Prioritize your well-being and embark on your mountain journeys with confidence.
+        </p>
+    </div>
+
+    <div class="about-content" style="margin-top: 0;">
+        <div style="margin-top: no; background-color: #202A44; padding: 20px; border-radius: 20px;">
+            <h2 class="about-title" style="color: white;">Features</h2>
+            <div class="feature-list">
+                <div class="feature">
+                    <i class="fa-solid fa-calculator"></i>
+                    <h3>Accurate Danger Score Calculation</h3>
+                    <p>Our cutting-edge technology analyzes various factors to provide you with an accurate danger score
+                        for
+                        your chosen route.</p>
+                </div>
+                <div class="feature">
+                    <i class="fa-solid fa-cloud"></i>
+                    <h3>Real-time Weather Data Integration</h3>
+                    <p>Stay informed with real-time weather data integration, helping you make informed decisions based
+                        on
+                        the latest conditions.</p>
+                </div>
+                <div class="feature">
+                    <i class="fa-solid fa-lightbulb"></i>
+                    <h3>Expert Tips and Recommendations</h3>
+                    <p>Receive expert tips and recommendations to navigate mountain hazards safely and enjoy your
+                        adventure.
+                    </p>
+                </div>
+                <div class="feature">
+                    <i class="fa-solid fa-user"></i>
+                    <h3>User-friendly Interface</h3>
+                    <p>Our intuitive user interface makes it easy for both experienced mountaineers and novices to use
+                        the
+                        app effectively.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Include your footer here -->
+    <footer class="footer">
+        <p>AvyRisk - All Rights Reserved</p>
+    </footer>
+    <script>
+        const hamburger = document.getElementById('hamburger');
+        const navLinks = document.querySelector('.nav-links');
+    
+        hamburger.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            hamburger.classList.toggle('active');
+        });
+    </script>
+</body>
+
+</html>
