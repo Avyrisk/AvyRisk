@@ -193,22 +193,21 @@ body {
     background-color: #f5fbff;
     padding: 2rem 10%;
     margin: 0 auto;
-    height: 83.5vh;
+    min-height: 83.5vh
 }
 
 .contact-title {
     font-size: 2.5rem;
     color: var(--secondary-color);
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
     text-align: center;
 }
 
 .contact-description {
     font-size: 1.2rem;
     color: var(--secondary-color);
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
     text-align: center;
-    line-height: 1.6;
 }
 
 .contact-form {
@@ -260,6 +259,11 @@ body {
     background-color: var(--primary-color);
     color: #0d152d;
 }
+
+.error {
+    color: red;
+}
+
 
 
 /* Footer styles */
@@ -381,6 +385,6 @@ body {
     }
 
     .contact-content {
-        height: 85.5vh;
+        min-height: 85.5vh;
     }
 }
