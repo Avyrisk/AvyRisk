@@ -35,7 +35,7 @@
             We'd love to hear from you! Feel free to reach out to us with any questions, suggestions, or inquiries.
             Your feedback is valuable to us.
         </p>
-        <form action="https://formspree.io/f/xknlbbww" method="POST" class="contact-form">
+        <form action="https://formspree.io/f/xknlbbww" method="POST" id="contact-form" style="max-width: 500px; margin: 0 auto;">
             <div class="form-group">
                 <label for="name">Name</label>
                 <input type="text" id="name">
@@ -75,7 +75,7 @@
         const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
 
         document.addEventListener('DOMContentLoaded', function () {
-            const contactForm = document.querySelector('.contact-form');
+            const contactForm = document.getElementById('contact-form');
             const nameInput = document.getElementById('name');
             const emailInput = document.getElementById('email');
             const messageInput = document.getElementById('message');
@@ -84,8 +84,6 @@
             const messageError = document.getElementById('message-error');
 
             contactForm.addEventListener('submit', async (event) => {
-                event.preventDefault();
-
                 // Clear previous error messages
                 nameError.textContent = '';
                 emailError.textContent = '';
@@ -118,7 +116,7 @@
                 }
 
                 if (hasError) {
-                    return;
+                    event.preventDefault();
                 }
             });
         });
